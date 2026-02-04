@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The code</title>
+</head>
+<body>
+    <p >
+        import turtle
+<p></p>
+win = turtle.Screen()
+<p></p>
+win.title("ana")
+<p></p>
+win.bgcolor("black")
+<p></p>
+win.setup(900, 700)
+<p></p>
+t = turtle.Turtle()
+<p></p>
+t.speed(0)
+<p></p>
+t.color("lime")
+<p></p>
+t.hideturtle()
+<p></p>
+t.left(90)
+<p></p>
+t.penup()
+<p></p>
+t.goto(0, -300)
+<p></p>
+t.pendown()
+<p></p>
+
+def tree(length, level):
+<p></p>
+    if length < 10 or level == 0:
+    <p></p>
+        return
+<p></p>
+    t.forward(length)
+    <p></p>
+
+    angles = [-30, -10, 10, 30]
+    <p></p>
+    for angle in angles:
+    <p></p>
+        t.left(angle)
+        <p></p>
+        tree(length * 0.7, level - 1)
+        <p></p>
+        t.right(angle)
+        <p></p>
+
+    t.backward(length)
+    <p></p>
+
+tree(120, 8)
+<p></p>
+win.mainloop()
+    </p>
+</body>
+</html>
